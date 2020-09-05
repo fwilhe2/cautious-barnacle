@@ -9,3 +9,4 @@ jobs:
     - uses: actions/checkout@v2
     - uses: fwilhe2/setup-kotlin@bootstrap
     - run: kotlinc foo.kt -include-runtime -d /tmp/hello.jar; java -jar /tmp/hello.jar
+    - run: kotlin foo.main.kts
