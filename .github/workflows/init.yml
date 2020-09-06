@@ -10,7 +10,7 @@ jobs:
         os: [ubuntu-20.04, windows-latest, macos-latest]
     steps:
     - uses: actions/checkout@v2
-    - uses: fwilhe2/setup-kotlin@script
+    - uses: fwilhe2/setup-kotlin@0.0.2
       with:
         script: |
             #!/usr/bin/env kotlin
@@ -28,3 +28,11 @@ jobs:
             }
     - run: kotlinc foo.kt -include-runtime -d hello.jar; java -jar hello.jar
     - run: kotlin foo.main.kts
+
+    - uses: fwilhe2/setup-kotlin@0.0.2
+      with:
+        script: |
+            #!/usr/bin/env kotlin
+            repeat(10){
+              println(1/it)
+            }
