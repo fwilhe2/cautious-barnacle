@@ -14,5 +14,5 @@ jobs:
     - run: kotlinc foo.kt -include-runtime -d hello.jar; java -jar hello.jar
     - run: kotlin foo.main.kts
     - run: |
-        #!/usr/bin/env kotlin
-        println("Hello")
+        echo 'println("Hello")' > script.main.kts
+        kotlin script.main.kts
