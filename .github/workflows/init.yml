@@ -13,4 +13,5 @@ jobs:
     - uses: fwilhe2/setup-kotlin@Update-latest-kotlin-version
     - run: kotlinc foo.kt -include-runtime -d hello.jar; java -jar hello.jar
     - run: kotlin foo.main.kts
+    - run: env
 
