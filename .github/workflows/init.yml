@@ -9,7 +9,7 @@ jobs:
       matrix:
         os: [ubuntu-20.04, windows-latest, macos-latest]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
     - uses: fwilhe2/setup-kotlin@0.0.3
     - run: kotlinc foo.kt -include-runtime -d hello.jar; java -jar hello.jar
     - run: kotlin foo.main.kts
