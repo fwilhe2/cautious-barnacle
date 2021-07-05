@@ -13,3 +13,6 @@ jobs:
     - uses: fwilhe2/setup-kotlin@0.0.3
     - run: kotlinc foo.kt -include-runtime -d hello.jar; java -jar hello.jar
     - run: kotlin foo.main.kts
+    - run: |
+        echo 'println("Hello")' > script.main.kts
+        kotlin script.main.kts
